@@ -12,7 +12,8 @@ public class exercise14 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("What is the order amount? ");
-        double amount = input.nextDouble();
+        String amt = input.nextLine();
+        double amount = Double.parseDouble(amt);
         System.out.print("What is the state? ");
         String state = input.nextLine();
 
@@ -20,10 +21,10 @@ public class exercise14 {
             double tax = 0.55;
             double total = tax+amount;
 
-            System.out.print("The subtotal is $"+String.format("%0.2f",amount)+"\nThe tax is $"+String.format("%0.2f",tax)+"\nThe total is $"+String.format("%0.2f",total));
+            System.out.print("The subtotal is $"+String.format("%.2f",amount)+"\nThe tax is $"+String.format("%.2f",tax)+"\nThe total is $"+String.format("%.2f",total));
         }
         else if(state != "WI"){
-            System.out.print("The total is $"+String.format("%0.2f",amount));
+            System.out.print("The total is $"+String.format("%.2f",amount));
         }
     }
 }
