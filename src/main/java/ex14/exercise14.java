@@ -18,7 +18,7 @@ public class exercise14 {
         String state = input.nextLine();
 
         if(state.equals("WI")){
-            double tax = 0.55;
+            double tax = 0.055*amount;
             double total = tax+amount;
 
             System.out.print("The subtotal is $"+String.format("%.2f",amount)+"\nThe tax is $"+String.format("%.2f",tax)+"\nThe total is $"+String.format("%.2f",total));
